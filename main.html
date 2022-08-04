@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaetherRoo</title>
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sticky-menu.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/82f797382f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylea.css">
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- menu bar -->
+    <img src="icon-removebg-preview.png"class="navbar-brand page-scroll" href="main.html">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+       <a id="logo" href="main.html"><img src="logo.png"></a>
+        </div>
+        
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="hidden">
+                    <a class="page-scroll" href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="main.html">Home</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="aboutus.html">About us</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div> <!-- .navbar-collapse -->
+    </div> <!-- .container -->
+</nav>
+    <!-- logo -->
+    <!-- weather card -->
+    <div class="card">
+        <div class="search">
+            <input type="text" class="search-bar" placeholder="Search">
+            <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em" width="1.5em"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                    </path>
+                </svg></button>
+        </div>
+        <div class="weather loading">
+            <h2 class="city">Weather in Berlin</h2>
+            <h1 class="temp"></h1>
+            <div class="flex">
+                <img src="https://openweathermap.org/img/wn/03n@2x.png" alt="" class="icon" />
+                <div class="description">Cloudy</div>
+            </div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">wind speed: 6.2km/h</div>
+            <div class="date-container">
+                <div class="time" id="time">
+                    12:30 <span id="am-pm">PM</span>
+                </div>
+                <div class="date" id="date">
+                    Monday, 24 May
+                </div>
+                <div class="palce-container">
+                    <div class="time-zone" id="time-zone">Europe / Berlin</div>
+                    <div id="country" class="country">DE</div>
+                </div>
+            </div>
+    </div>
+    </div>
+    <!-- future forcast -->
+    <div class="future-forecast">
+        <div class="today" id="current-temp">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon" id="img1">
+            <div class="other">
+                <div class="day">Monday</div>
+                <div class="temp" id="day1min">Min - 25.6&#176; C</div>
+                <div class="temp" id="day1max">Max - 35.6&#176; C</div>
+            </div>
+    
+        </div>
+    
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-forecast-item">
+                <div class="day">Tue</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon" id="img2">
+                <div class="temp" id="day2min">Min - 25.6&#176; C</div>
+                <div class="temp" id="day2max">Max - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">wed</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon" id="img3">
+                <div class="temp"  id="day3min">Min - 25.6&#176; C</div>
+                <div class="temp"  id="day3max">Max - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Thr</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon" id="img4">
+                <div class="temp" id="day4min">Min - 25.6&#176; C</div>
+                <div class="temp"  id="day4max">Max - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Fri</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon" id="img5">
+                <div class="temp"  id="day5min">Min - 25.6&#176; C</div>
+                <div class="temp"  id="day5max">Max - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Sat</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Min - 25.6&#176; C</div>
+                <div class="temp">Max - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Sun</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Min - 25.6&#176; C</div>
+                <div class="temp">Max - 35.6&#176; C</div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/sticky-menu.js"></script>
+    <!---card js-->
+    <script src="card.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--future js--
+    <script src="fu.js" defer></script>-->
+
+</body>
+</html>
